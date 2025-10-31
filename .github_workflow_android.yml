@@ -1,0 +1,21 @@
+name: Build Android APK (flat package helper)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      PIPEDRIVE_TOKEN: ${{ secrets.PIPEDRIVE_TOKEN }}
+      PIPEDRIVE_DOMAIN: ${{ secrets.PIPEDRIVE_DOMAIN }}
+      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+      APOLLO_KEY: ${{ secrets.APOLLO_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Note
+        run: echo "This repo contains a flat upload - move files into Android project structure before building."

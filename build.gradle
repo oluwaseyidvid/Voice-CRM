@@ -1,0 +1,6 @@
+// Minimal build placeholders - real Gradle files must be the proper project layout when building.
+// This flat package is meant for upload convenience; CI will expect a standard Android project structure.
+// Keep these here as metadata for your review before moving files into a real project structure.
+// Do not attempt to build directly from the flat folder on local machine.
+group 'com.neuralic'
+version '0.1.0'
